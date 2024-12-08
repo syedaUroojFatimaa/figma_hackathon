@@ -23,7 +23,7 @@ export default function page() {
           <h1 className="text-3xl font-normal">Avion</h1>
 
           <div className="flex items-center space-x-4">
-            <Link href="./components" className=' font-normal'>Home</Link>
+            <Link href="#" className=' font-normal'>About Us</Link>
             <Link href="" className=' font-normal'>Contact</Link>
             <Link href="" className=' font-normal'>Blog</Link>
             <FaSearch
@@ -42,7 +42,7 @@ export default function page() {
         </div>
       </header>
     </div>
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 ">
     <div className="hidden md:flex space-x-8 ml-96 py-6">
     <a href="#" className="text-gray-600 hover:text-gray-900">
           All Products
@@ -77,9 +77,11 @@ export default function page() {
   <p className="text-4xl font-normal text-gray-950 ml-14 pt-1">
     quality and outstanding customer service
   </p>
+  <Link href="./allprod">
   <button className="absolute top-0 right-0 mt-20 mr-40 bg-gray-50 text-black py-4 px-8">
-    View Collection
+    View Products
   </button>
+  </Link>
 </div>
 
 <div className="flex gap-8">
@@ -91,9 +93,12 @@ export default function page() {
 <p className='text-white text-base ml-16'>small studio in South London in early 2014
 </p>
 <div className="ml-16 pt-36">
+<Link href="./allprod">
             <button className="bg-violet-400 text-white py-3 px-6">
               View Collection
             </button>
+            </Link>
+
           </div>
 </div>
 <div className='pt-20'>
@@ -128,7 +133,7 @@ export default function page() {
 </div>
 </div>
 
-<div className="text-center pt-16 bg-white">
+<div className="text-center pt-16 bg-white mb-4">
       <div className="text-2xl font-semibold mb-8">What Makes Our Brand Different</div>
       <div className="flex">
         <FaTruckFast className="text-4xl text-gray-700 ml-20" />

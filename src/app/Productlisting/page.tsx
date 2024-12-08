@@ -174,9 +174,11 @@ const Productlisting =() => {
 
           {/* View Collection Button */}
           <div className="my-10 flex justify-center">
+            <Link href="./allprod">
             <button className="bg-[#F9F9F9] py-3 px-6 rounded-md text-[#2A254B]">
               View collection
             </button>
+            </Link>
           </div>
 
           <div className="px-4 md:px-8 py-12 text-[#2A254B] mt-12">
