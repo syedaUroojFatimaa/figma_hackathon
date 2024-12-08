@@ -110,16 +110,16 @@ const Productlisting =() => {
             </div>
           </div>
 
-          <div className="flex gap-6 px-16 pt-10">
+          <div className="flex gap-6 px-16 pt-10 flex-wrap md:flex-nowrap">
         {/* Card 1 */}
-        <div>
+        <div className="">
           <Link href="./Productlisting">
-          <Image
-            src="/img/chair1.jpg"
-            alt="Chair"
-            width={300}
-            height={350}
-          />
+            <Image
+              src="/img/chair1.jpg"
+              alt="Chair"
+              width={300}
+              height={350}
+            />
           </Link>
           <p className="mt-3 text-lg font-normal">The Dandy Chair</p>
           <p className="">£250</p>
@@ -127,14 +127,13 @@ const Productlisting =() => {
 
         {/* Card 2 */}
         <div className="">
-        <Link href="./Productlisting">
-          <Image
-            src="/img/stone.jpg"
-            alt="Stone"
-            width={300}
-            height={350}
-            className=""
-          />
+          <Link href="./Productlisting">
+            <Image
+              src="/img/stone.jpg"
+              alt="Stone"
+              width={300}
+              height={350}
+            />
           </Link>
           <p className="mt-3 text-lg font-normal">Rustic Vase Set</p>
           <p className="">£155</p>
@@ -142,14 +141,13 @@ const Productlisting =() => {
 
         {/* Card 3 */}
         <div className="">
-        <Link href="./Productlisting">
-          <Image
-            src="/img/bottle.jpg"
-            alt="Bottle"
-            width={300}
-            height={350}
-            className=""
-          />
+          <Link href="./Productlisting">
+            <Image
+              src="/img/bottle.jpg"
+              alt="Bottle"
+              width={300}
+              height={350}
+            />
           </Link>
           <p className="mt-3 text-lg font-normal">The Silky Vase</p>
           <p className="">£125</p>
@@ -157,14 +155,13 @@ const Productlisting =() => {
 
         {/* Card 4 */}
         <div className="">
-        <Link href="./Productlisting">
-          <Image
-            src="/img/bulb.jpg"
-            alt="Lamp"
-            width={300}
-            height={350}
-            className=""
-          />
+          <Link href="./Productlisting">
+            <Image
+              src="/img/bulb.jpg"
+              alt="Lamp"
+              width={300}
+              height={350}
+            />
           </Link>
           <p className="mt-3 text-lg font-normal">The Lucy Lamp</p>
           <p className="">£399</p>
