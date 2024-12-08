@@ -96,7 +96,7 @@ export default function Page() {
               <div className="flex flex-col md:w-[25%] p-4 rounded-lg">
                 <MdOutlinePriceChange size={35} className="text-[#2A254B]" />
                 <p className="py-4 font-normal text-2xl">Unbeatable prices</p>
-                <p>For our material and quality, you won't find better prices anywhere.</p>
+                <p>For our material and quality, you&apos;ll won&apos;t find better prices anywhere.</p>
               </div>
 
               {/* Feature 4 */}

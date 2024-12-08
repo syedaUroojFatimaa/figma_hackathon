@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @next/next/no-img-element */
+
 import { FaSearch, FaShoppingCart, FaUser, FaLinkedin, FaInstagram, FaFacebookSquare, FaTwitter, FaPinterest } from "react-icons/fa";
 import { IoLogoSkype } from "react-icons/io";
 import React from "react";
