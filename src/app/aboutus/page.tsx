@@ -1,121 +1,265 @@
-import React from "react";
-
-const About = () => {
+import React from 'react'
+import { FaTruckFast } from "react-icons/fa6";
+import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
+import { VscPass } from "react-icons/vsc";
+import { FaCreditCard } from "react-icons/fa6";
+import { FaLeaf } from "react-icons/fa6";
+import { TbTruckDelivery } from "react-icons/tb";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { LuSprout } from "react-icons/lu";
+import { MdOutlinePriceChange } from "react-icons/md";
+import Link from 'next/link';
+import { FaLinkedin, FaInstagram, FaFacebookSquare, FaTwitter, FaPinterest } from "react-icons/fa";
+import { IoLogoSkype } from "react-icons/io";
+import Image from 'next/image';
+export default function page() {
   return (
     <div>
-      {/* Hero Section */}
-      <div className="w-full h-auto flex flex-col md:flex-row justify-between items-center px-4 md:px-16 py-8">
-        <div className="md:w-2/4 text-xl md:text-2xl text-center md:text-left text-custom-purple">
-          A brand built on the love of craftsmanship, quality, and outstanding customer service
-        </div>
-        <div className="mt-6 md:mt-0">
-          <button className="bg-gray-200 h-12 w-40 rounded-sm text-custom-purple">
-            View our products
-          </button>
+            <div className="bg-white">
+        <header className="bg-white">
+          <div className="container mx-auto px-4 flex items-center justify-between py-4 flex-col md:flex-row">
+            <FaSearch className="text-gray-600 hover:text-gray-900 cursor-pointer" size={20} />
+            <h1 className="text-3xl font-normal text-center">Avion</h1>
+            <div className="flex items-center space-x-4 mt-4 md:mt-0">
+              <Link href="./cart">
+                <FaShoppingCart className="text-gray-600 hover:text-gray-900 cursor-pointer" size={20} />
+              </Link>
+              <FaUser className="text-gray-600 hover:text-gray-900 cursor-pointer" size={20} />
+            </div>
+          </div>
+        </header>
+
+        <hr className="border-t border-gray-300 my-1 ml-6 mr-6" />
+
+        <div className="hidden md:flex space-x-8 ml-96 pt-4">
+          <a href="#" className="text-gray-600 hover:text-gray-900">Plant pots</a>
+          <a href="#" className="text-gray-600 hover:text-gray-900">Ceramics</a>
+          <a href="#" className="text-gray-600 hover:text-gray-900">Tables</a>
+          <a href="#" className="text-gray-600 hover:text-gray-900">Chairs</a>
+          <a href="#" className="text-gray-600 hover:text-gray-900">Crockery</a>
+          <a href="#" className="text-gray-600 hover:text-gray-900">Tableware</a>
+          <a href="#" className="text-gray-600 hover:text-gray-900">Cutlery</a>
         </div>
       </div>
-
-      {/* Story Section */}
-      <div className="flex flex-col md:flex-row w-full h-auto items-center justify-around px-4 py-16">
-        <div className="bg-custom-purple w-full md:w-2/5 text-white p-8 md:p-16 mb-8 md:mb-0">
-          <h1 className="text-xl md:text-2xl">It started with a small idea</h1>
-          <p className="mt-6">
-            A global brand with local beginnings, our story began in a small studio in South London in early 2014.
-          </p>
-          <button className="bg-input-bg h-12 w-40 rounded-sm mt-10 text-white">
-            View Collection
+      
+    <div>
+      {/* Section 1 */}
+      <div className="relative">
+        <h1 className="text-2xl sm:text-4xl font-normal text-gray-950 ml-4 sm:ml-14 pt-10 sm:pt-16">
+          A brand built on the love of craftsmanship,
+        </h1>
+        <p className="text-2xl sm:text-4xl font-normal text-gray-950 ml-4 sm:ml-14 pt-2 sm:pt-1">
+          quality and outstanding customer service
+        </p>
+        <Link href="./allprod">
+          <button className="absolute top-0 right-0 mt-16 sm:mt-20 mr-4 sm:mr-40 bg-gray-50 text-black py-3 sm:py-4 px-6 sm:px-8">
+            View Products
           </button>
+        </Link>
+      </div>
+
+      {/* Section 2 */}
+      <div className="flex flex-col lg:flex-row gap-8">
+        <div className="bg-violet-950 mt-10 sm:mt-20 mx-4 lg:ml-32 w-full lg:w-[550px] h-auto lg:h-[380px] p-6 lg:p-0">
+          <h1 className="text-xl sm:text-4xl text-white ml-4 lg:ml-16 pt-4 lg:pt-16">
+            It started with a small idea
+          </h1>
+          <p className="text-white text-sm sm:text-base ml-4 lg:ml-16 mt-4">
+            A global brand with local beginnings, our story began in a
+          </p>
+          <p className="text-white text-sm sm:text-base ml-4 lg:ml-16">
+            small studio in South London in early 2014.
+          </p>
+          <div className="ml-4 lg:ml-16 pt-8 lg:pt-36">
+            <Link href="./allprod">
+              <button className="bg-violet-400 text-white py-2 sm:py-3 px-4 sm:px-6">
+                View Collection
+              </button>
+            </Link>
+          </div>
         </div>
-        <div className="w-full md:w-2/5">
-          <img
-            src="/images/About main.png"
-            alt="About main"
-            className="w-full transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+        <div className="pt-10 sm:pt-20">
+          <Image
+            src="/img/Image Block.png"
+            alt="Image Block showcasing brand identity"
+            width={500}
+            height={800}
           />
         </div>
       </div>
 
-      {/* Service Section */}
-      <div className="flex flex-col md:flex-row w-full h-auto items-center px-4 py-16 space-y-8 md:space-y-0">
-        <img
-          src="/images/About second.png"
-          alt="Service"
-          className="w-full md:w-2/5 transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
-        />
-        <div className="border-2 bg-slate-200 w-full md:w-3/5 p-8 md:p-20">
-          <h1 className="text-xl md:text-2xl text-custom-purple">
-            Our service isn&lsquo;t just personal, it&lsquo;s actually hyper-personally exquisite
+      {/* Section 3 */}
+      <div className="pt-10 sm:pt-14 flex flex-col lg:flex-row">
+        <div className="w-full lg:w-auto">
+          <Image
+            src="/img/bfSofa.jpg"
+            alt="Background image of a sofa"
+            width={750}
+            height={700}
+          />
+        </div>
+        <div className="bg-gray-50 h-auto lg:h-[590px] w-full lg:w-[700px] text-gray-900 font-normal py-8 lg:pt-16 px-6 lg:px-16">
+          <h1 className="text-lg sm:text-2xl">
+          Our service isn&lsquo;t just personal, it&lsquo;s          </h1>
+          <h1 className="text-lg sm:text-2xl mt-2">hyper personally exquisite</h1>
+          <p className="pt-6">
+            When we started Avion, the idea was simple. Make high-quality furniture
+          </p>
+          <p>affordable and available for the mass market.</p>
+          <p className="pt-6">
+            Handmade, and lovingly crafted furniture and homeware is what we live,
+          </p>
+          <p>
+            breathe, and design, so our Chelsea boutique became the hotbed for the
+          </p>
+          <p>London interior design community.</p>
+          <button className="bg-white mt-5 lg:mt-52 py-2 sm:py-3 px-4 sm:px-6 text-gray-700 hover:bg-slate-300">
+            Get in Touch
+          </button>
+        </div>
+      </div>
+    </div>
+
+<section className='bg-white'>
+        <div className="px-4 md:px-8 py-12 text-[#2A254B] mt-12">
+          {/* Title */}
+          <h1 className="text-center text-xl md:text-2xl font-semibold">
+            What makes our brand different
           </h1>
-          <p className="text-custom-purple mt-6">
-            When we started Avion, the idea was simple. Make high-quality furniture affordable and available for the
-            mass market. Handmade, and lovingly crafted furniture and homeware is what we live, breathe, and design so
-            our Chelsea boutique became the hotbed for the London interior design community.
-          </p>
-          <button className="bg-white h-12 w-40 rounded-sm mt-10 text-custom-purple">Get in Touch</button>
-        </div>
-      </div>
 
-      {/* Features Section */}
-      <div className="w-full h-auto pb-16">
-        <h1 className="text-center text-custom-purple text-xl">What makes our brand different</h1>
-        <div className="flex flex-wrap justify-center md:justify-evenly px-4 py-10 gap-8">
-          {[
-            {
-              img: "/images/Delivery.png",
-              title: "Next day as standard",
-              desc: "Order before 3pm and get your order the next day as standard",
-            },
-            {
-              img: "/images/check.png",
-              title: "Made by true artisans",
-              desc: "Handmade crafted goods made with real passion and craftsmanship",
-            },
-            {
-              img: "/images/Purchase.png",
-              title: "Unbeatable prices",
-              desc: "For our materials and quality you won’t find better prices anywhere",
-            },
-            {
-              img: "/images/Sprout.png",
-              title: "Recycled packaging",
-              desc: "We use 100% recycled materials to ensure our footprint is more manageable",
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-gray-200 w-72 h-auto rounded-sm px-6 py-8 text-center"
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="mx-auto transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
-              />
-              <h1 className="text-custom-purple text-lg mt-4">{item.title}</h1>
-              <p className="text-custom-purple mt-4">{item.desc}</p>
+          {/* Features */}
+          <div className="flex flex-col md:flex-row gap-8 mt-12 text-base md:text-lg">
+            {/* Feature 1 */}
+            <div className="flex flex-col   md:w-[25%] p-4  rounded-lg">
+              <TbTruckDelivery size={35} className="text-[#2A254B]" />
+              <p className="py-4 font-normal text-2xl">Next day as standard</p>
+              <p>Order before 3pm and get your order the next day as standard.</p>
             </div>
-          ))}
+
+            {/* Feature 2 */}
+            <div className="flex flex-col   md:w-[25%] p-4  rounded-lg">
+            <IoIosCheckmarkCircleOutline  size={35} className="text-[#2A254B]"/>
+              <p className="py-4 font-normal text-2xl">Made by true artisans</p>
+              <p>Hand-crafted goods made with real passion and craftsmanship.</p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="flex flex-col   md:w-[25%] p-4  rounded-lg">
+            <MdOutlinePriceChange size={35} className="text-[#2A254B]"/>
+              <p className="py-4 font-normal text-2xl">Unbeatable prices</p>
+              <p>For our material and quality, you won&apos;t find better prices anywhere.</p>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="flex flex-col   md:w-[25%] p-4  rounded-lg">
+            <LuSprout size={35} className="text-[#2A254B]"/>
+              <p className="py-4 font-normal text-2xl">Recycled packaging</p>
+              <p>We use 100% recycled packaging to ensure our footprint is manageable.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="flex justify-center items-center pt-12 bg-gray-50">
+        <div className="bg-white rounded shadow-md p-8 h-full w-[1100px] text-center">
+          <h1 className="text-3xl font-normal text-gray-800 mb-8">
+            Join the club and get the benefits
+          </h1>
+          <p className="text-gray-600 font-normal text-lg mb-0">
+            Sign up for our newsletter and receive exclusive offers on new
+          </p>
+          <p className="text-gray-600 font-normal text-lg mb-6">
+          ranges,
+          sales, pop-up stores, and more.
+          </p>
+          <form className="flex items-center justify-center mb-4">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              className="w-full max-w-md px-4 py-4 border border-gray-300 "
+              required
+            />
+            <button
+              type="submit"
+              className="px-6 py-4 bg-gray-950 mr-7 text-white hover:bg-gray-700 transition duration-300"
+            >
+              Sign up
+            </button>
+          </form>
+
         </div>
       </div>
+      <div className='px-6 md:px-12 py-8 bg-[#2A254B] mt-8'>
+        <div className="flex flex-wrap gap-12 md:gap-[100px] lg:gap-[200px]">
+          {/* Menu Section */}
+          <div className="text-gray-500 w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Menu</h1>
+            <div className='space-y-2'>
+              <h1><Link href={'/'}>New Arrivals</Link></h1>
+              <h1><Link href={'/'}>Best sellers</Link></h1>
+              <h1><Link href={'/'}>Recently viewed</Link></h1>
+              <h1><Link href={'/'}>Popular this week</Link></h1>
+              <h1><Link href={'/'}>All Products</Link></h1>
+            </div>
+          </div>
 
-      {/* Newsletter Section */}
-      <div className="w-full h-auto bg-gray-100 py-8">
-        <div className="m-auto w-11/12 bg-white p-8 md:p-16">
-          <h1 className="text-custom-purple text-2xl md:text-3xl text-center">Join the club and get the benefits</h1>
-          <p className="text-custom-purple text-center mt-6 text-sm md:text-base">
-            Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop-up stores, and more.
-          </p>
-          <div className="flex flex-col md:flex-row justify-center items-center mt-6 space-y-4 md:space-y-0">
-            <input
-              type="text"
-              placeholder="you@gmail.com"
-              className="bg-gray-100 w-80 h-12 p-5 rounded-sm"
-            />
-            <button className="bg-custom-purple h-12 w-32 rounded-sm text-white">Sign Up</button>
+          {/* Categories Section */}
+          <div className="text-gray-500 w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Categories</h1>
+            <div className='space-y-2'>
+              <h1><Link href={'/'}>Crockery</Link></h1>
+              <h1><Link href={'/'}>Furniture</Link></h1>
+              <h1><Link href={'/'}>Homeware</Link></h1>
+              <h1><Link href={'/'}>Plant pots</Link></h1>
+              <h1><Link href={'/'}>Chairs</Link></h1>
+            </div>
+          </div>
+
+          {/* Company Section */}
+          <div className="text-gray-500 w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Our Company</h1>
+            <div className='space-y-2'>
+              <h1><Link href='/about'>About us</Link></h1>
+              <h1><Link href={'/'}>Vacancies</Link></h1>
+              <h1><Link href={'/'}>Contact us</Link></h1>
+              <h1><Link href={'/'}>Privacy</Link></h1>
+              <h1><Link href={'/'}>Return policy</Link></h1>
+            </div>
+          </div>
+
+          {/* Mailing List Section */}
+          <div className="text-white w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Join our mailing list</h1>
+            <div className='mt-4'>
+              <input
+                type="text"
+                placeholder="your@email.com"
+                className='w-full sm:w-[250px] lg:w-[300px] h-[48px] p-2 bg-transparent opacity-35 border border-white rounded-md'
+              />
+              <button className='mt-2 sm:mt-0 sm:ml-2 w-full sm:w-[100px] h-[48px] bg-white text-[#2A254B] rounded-md'>
+                Sign up
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <hr className='bg-[#4E4D93] my-8' />
+
+        {/* Footer Bottom Section */}
+        <div className='flex flex-wrap justify-between items-center text-white gap-4'>
+          <div>
+            <h1>Copyright 2022 Avion LTD</h1>
+          </div>
+          <div className='flex gap-4'>
+            <Link href={'/'}><FaLinkedin size={20} /></Link>
+            <Link href={'/'}><FaFacebookSquare size={20} /></Link>
+            <Link href={'/'}><FaInstagram size={20} /></Link>
+            <Link href={'/'}><IoLogoSkype size={20} /></Link>
+            <Link href={'/'}><FaTwitter size={20} /></Link>
+            <Link href={'/'}><FaPinterest size={20} /></Link>
           </div>
         </div>
       </div>
     </div>
-  );
-};
-
-export default About;
+  )
+}

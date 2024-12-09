@@ -216,52 +216,64 @@ const Productlisting =() => {
           </div>
         </div>
 
-          <div className="h-96 bg-violet-950 ">
-      <div className="flex space-x-8 pt-10 pl-20 font-normal">
-        <div>
-          <h1 className="text-white text-lg  font-Clash Display">Menu</h1>
-          <p className="text-white mt-4 text-sm">New arrivals</p>
-          <p className="text-white mt-4 text-sm">Best seller</p>
-          <p className="text-white mt-4 text-sm">Recently Viewed</p>
-          <p className="text-white mt-4 text-sm">Popular this week</p>
-          <p className="text-white mt-4 text-sm">All Products</p>
+        <div className='px-6 md:px-12 py-8 bg-[#2A254B] mt-8'>
+        <div className="flex flex-wrap gap-12 md:gap-[100px] lg:gap-[200px]">
+          {/* Menu Section */}
+          <div className="text-gray-500 w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Menu</h1>
+            <div className='space-y-2'>
+              <h1><Link href={'/'}>New Arrivals</Link></h1>
+              <h1><Link href={'/'}>Best sellers</Link></h1>
+              <h1><Link href={'/'}>Recently viewed</Link></h1>
+              <h1><Link href={'/'}>Popular this week</Link></h1>
+              <h1><Link href={'/'}>All Products</Link></h1>
+            </div>
+          </div>
+
+          {/* Categories Section */}
+          <div className="text-gray-500 w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Categories</h1>
+            <div className='space-y-2'>
+              <h1><Link href={'/'}>Crockery</Link></h1>
+              <h1><Link href={'/'}>Furniture</Link></h1>
+              <h1><Link href={'/'}>Homeware</Link></h1>
+              <h1><Link href={'/'}>Plant pots</Link></h1>
+              <h1><Link href={'/'}>Chairs</Link></h1>
+            </div>
+          </div>
+
+          {/* Company Section */}
+          <div className="text-gray-500 w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Our Company</h1>
+            <div className='space-y-2'>
+              <h1><Link href='/about'>About us</Link></h1>
+              <h1><Link href={'/'}>Vacancies</Link></h1>
+              <h1><Link href={'/'}>Contact us</Link></h1>
+              <h1><Link href={'/'}>Privacy</Link></h1>
+              <h1><Link href={'/'}>Return policy</Link></h1>
+            </div>
+          </div>
+
+          {/* Mailing List Section */}
+          <div className="text-white w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Join our mailing list</h1>
+            <div className='mt-4'>
+              <input
+                type="text"
+                placeholder="your@email.com"
+                className='w-full sm:w-[250px] lg:w-[300px] h-[48px] p-2 bg-transparent opacity-35 border border-white rounded-md'
+              />
+              <button className='mt-2 sm:mt-0 sm:ml-2 w-full sm:w-[100px] h-[48px] bg-white text-[#2A254B] rounded-md'>
+                Sign up
+              </button>
+            </div>
+          </div>
         </div>
-        <div>
-          <h1 className="text-white text-lg font-normal Display ml-20">
-            Catergory
-          </h1>
-          <p className="text-white mt-4 text-sm ml-20">Crockery</p>
-          <p className="text-white mt-4 text-sm ml-20">Furniture</p>
-          <p className="text-white mt-4 text-sm ml-20">Homeware</p>
-          <p className="text-white mt-4 text-sm ml-20">Plants pot</p>
-          <p className="text-white mt-4 text-sm ml-20">Chiar</p>
-          <p className="text-white mt-4 text-sm ml-20">Crockery</p>
-        </div>
-        <div className="pl-28">
-          <h1 className="text-white text-lg font-normal Display">Our Company</h1>
-          <Link href="./pages/aboutus" className="text-white mt-4 text-sm ">About Us</Link>
-          <p className="text-white mt-4 text-sm ">Vacancies</p>
-          <p className="text-white mt-4 text-sm ">Contact Us</p>
-          <p className="text-white mt-4 text-sm ">Privacy</p>
-          <p className="text-white mt-4 text-sm ">Return Policy</p>
-        </div>
-        <div className="pl-28">
-          <h1 className="text-white text-lg font-Clash Display">
-            Join our mailing list
-          </h1>
-          <input
-            type="text"
-            placeholder="you@gmail.com"
-            className="bg-slate-50 w-80 mt-5 h-12 p-5 "
-          />
-          <button className="bg-slate-200 h-12 w-32  mt-1">
-            Sign Up
-          </button>
-        </div>
-      </div>
-      <div className="border-t-2 m-auto w-11/12 my-8"> 
-      
-      <div className='flex flex-wrap justify-between items-center text-white gap-4 pt-2'>
+
+        <hr className='bg-[#4E4D93] my-8' />
+
+        {/* Footer Bottom Section */}
+        <div className='flex flex-wrap justify-between items-center text-white gap-4'>
           <div>
             <h1>Copyright 2022 Avion LTD</h1>
           </div>
@@ -275,7 +287,6 @@ const Productlisting =() => {
           </div>
         </div>
       </div>
-    </div>
         </div>
       </section>
       </div>

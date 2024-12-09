@@ -200,83 +200,76 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-    <div className="bg-violet-950 text-white pt-10">
-      <div className="container mx-auto flex flex-wrap justify-between gap-8 px-4 md:px-20 font-normal">
-        {/* Menu Section */}
-        <div className="w-full sm:w-1/2 md:w-1/4">
-          <h1 className="text-lg font-semibold">Menu</h1>
-          <p className="mt-4 text-sm">New arrivals</p>
-          <p className="mt-4 text-sm">Best seller</p>
-          <p className="mt-4 text-sm">Recently Viewed</p>
-          <p className="mt-4 text-sm">Popular this week</p>
-          <p className="mt-4 text-sm">All Products</p>
-        </div>
-        
-        {/* Category Section */}
-        <div className="w-full sm:w-1/2 md:w-1/4">
-          <h1 className="text-lg font-semibold">Category</h1>
-          <p className="mt-4 text-sm">Crockery</p>
-          <p className="mt-4 text-sm">Furniture</p>
-          <p className="mt-4 text-sm">Homeware</p>
-          <p className="mt-4 text-sm">Plant pots</p>
-          <p className="mt-4 text-sm">Chair</p>
-          <p className="mt-4 text-sm">Crockery</p>
+      <div className='px-6 md:px-12 py-8 bg-[#2A254B] mt-8'>
+        <div className="flex flex-wrap gap-12 md:gap-[100px] lg:gap-[200px]">
+          {/* Menu Section */}
+          <div className="text-gray-500 w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Menu</h1>
+            <div className='space-y-2'>
+              <h1><Link href={'/'}>New Arrivals</Link></h1>
+              <h1><Link href={'/'}>Best sellers</Link></h1>
+              <h1><Link href={'/'}>Recently viewed</Link></h1>
+              <h1><Link href={'/'}>Popular this week</Link></h1>
+              <h1><Link href={'/'}>All Products</Link></h1>
+            </div>
+          </div>
+
+          {/* Categories Section */}
+          <div className="text-gray-500 w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Categories</h1>
+            <div className='space-y-2'>
+              <h1><Link href={'/'}>Crockery</Link></h1>
+              <h1><Link href={'/'}>Furniture</Link></h1>
+              <h1><Link href={'/'}>Homeware</Link></h1>
+              <h1><Link href={'/'}>Plant pots</Link></h1>
+              <h1><Link href={'/'}>Chairs</Link></h1>
+            </div>
+          </div>
+
+          {/* Company Section */}
+          <div className="text-gray-500 w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Our Company</h1>
+            <div className='space-y-2'>
+              <h1><Link href='/about'>About us</Link></h1>
+              <h1><Link href={'/'}>Vacancies</Link></h1>
+              <h1><Link href={'/'}>Contact us</Link></h1>
+              <h1><Link href={'/'}>Privacy</Link></h1>
+              <h1><Link href={'/'}>Return policy</Link></h1>
+            </div>
+          </div>
+
+          {/* Mailing List Section */}
+          <div className="text-white w-full sm:w-auto">
+            <h1 className="text-lg md:text-xl font-bold">Join our mailing list</h1>
+            <div className='mt-4'>
+              <input
+                type="text"
+                placeholder="your@email.com"
+                className='w-full sm:w-[250px] lg:w-[300px] h-[48px] p-2 bg-transparent opacity-35 border border-white rounded-md'
+              />
+              <button className='mt-2 sm:mt-0 sm:ml-2 w-full sm:w-[100px] h-[48px] bg-white text-[#2A254B] rounded-md'>
+                Sign up
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* Our Company Section */}
-        <div className="w-full sm:w-1/2 md:w-1/4">
-          <h1 className="text-lg font-semibold">Our Company</h1>
-          <Link href="./aboutus"
-           className="text-sm mt-4">About Us
-          </Link>
-          <p className="text-sm mt-4">Vacancies</p>
-          <p className="text-sm mt-4">Contact Us</p>
-          <p className="text-sm mt-4">Privacy</p>
-          <p className="text-sm mt-4">Return Policy</p>
-        </div>
+        <hr className='bg-[#4E4D93] my-8' />
 
-        {/* Newsletter Section */}
-        <div className="w-full sm:w-1/2 md:w-1/4">
-          <h1 className="text-lg font-semibold">Join our mailing list</h1>
-          <input
-            type="text"
-            placeholder="you@gmail.com"
-            className="bg-slate-50 w-full md:w-80 mt-5 h-12 p-5 rounded-md"
-          />
-          <button className="bg-slate-200 h-12 w-full md:w-32 mt-2 rounded-md">
-            Sign Up
-          </button>
-        </div>
-      </div>
-
-      {/* Social Media Icons */}
-      <div className="border-t-2 m-auto w-11/12 my-8">
-        <div className="flex flex-wrap justify-between items-center text-white gap-4 pt-2">
+        {/* Footer Bottom Section */}
+        <div className='flex flex-wrap justify-between items-center text-white gap-4'>
           <div>
-            <h1 className="text-sm">Copyright 2022 Avion LTD</h1>
+            <h1>Copyright 2022 Avion LTD</h1>
           </div>
-          <div className="flex gap-4">
-            <Link href={'/'}>
-              <FaLinkedin size={20} />
-            </Link>
-            <Link href={'/'}>
-              <FaFacebookSquare size={20} />
-            </Link>
-            <Link href={'/'}>
-              <FaInstagram size={20} />
-            </Link>
-            <Link href={'/'}>
-              <IoLogoSkype size={20} />
-            </Link>
-            <Link href={'/'}>
-              <FaTwitter size={20} />
-            </Link>
-            <Link href={'/'}>
-              <FaPinterest size={20} />
-            </Link>
+          <div className='flex gap-4'>
+            <Link href={'/'}><FaLinkedin size={20} /></Link>
+            <Link href={'/'}><FaFacebookSquare size={20} /></Link>
+            <Link href={'/'}><FaInstagram size={20} /></Link>
+            <Link href={'/'}><IoLogoSkype size={20} /></Link>
+            <Link href={'/'}><FaTwitter size={20} /></Link>
+            <Link href={'/'}><FaPinterest size={20} /></Link>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
