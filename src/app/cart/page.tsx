@@ -1,13 +1,69 @@
-
+"use client"
+import React from 'react'
 import { FaSearch, FaShoppingCart, FaUser, FaLinkedin, FaInstagram, FaFacebookSquare, FaTwitter, FaPinterest } from "react-icons/fa";
 import { IoLogoSkype } from "react-icons/io";
-import React from "react";
-import Link from 'next/link';
-import Image from 'next/image';
-
+import { useState } from "react";
+import Link from "next/link";
 const Cart = () => {
-  return (
-    <div>
+    const products = [
+        {
+            id: 1,
+            name: "The Dandy chair",
+            description: "A chair is a piece of furniture that comfortable seating option...",
+            price: 100,
+            image: "/img/Image Left.png",
+        },
+        {
+            id: 2,
+            name: "Rustic Vase Set",
+            description: "A timeless ceramic vase with a tri color grey glaze...",
+
+            price: 960,
+            image: "/img/stone.jpg",
+        },
+        {
+            id: 3,
+            name: "The Silky Vase",
+            description: "A timeless ceramic vase with a tri color white glaze...",
+            price: 700,
+                        image: "/img/Product Image.png",
+        },
+        {
+            id: 4,
+            name: "The Lucy Lamp",
+            description: "A lamp is a Lighting device that illuminates spaces....",
+            price: 250,
+            image: "/img/bulb.jpg",
+        },
+        {
+            id: 5,
+            name: "Golden Lamp",
+            description: "A lamp is a Lighting device that adding both functionality...",
+            price: 15,
+            image: "/img/p1.jpg",
+        },
+    ];
+
+    const [cart, setCart] = useState(
+        products.map((product) => ({ ...product, quantity: 1 }))
+    );
+
+    const updateQuantity = (id: any, quantity: any) => {
+        setCart((prevCart) =>
+            prevCart.map((item) =>
+                item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
+            )
+        );
+    };
+
+    const subTotal = cart.reduce(
+        (acc, item) => acc + item.price * item.quantity,
+        0
+    );
+
+    return (
+      <div>
+        <div>
       <header className="bg-white">
         <div className="container mx-auto px-4 flex items-center justify-between py-4">
           <FaSearch className="text-gray-600 hover:text-gray-900 cursor-pointer" size={20} />
@@ -32,65 +88,50 @@ const Cart = () => {
         <Link href="#" className="text-gray-600 hover:text-gray-900">Tableware</Link>
         <Link href="#" className="text-gray-600 hover:text-gray-900">Cutlery</Link>
       </div>
-
-      <div className="bg-gray-100 w-full px-4 sm:px-10 lg:px-40 pt-10 pb-16 h-auto text-custom-purple">
-        <h1 className="text-4xl sm:text-3xl text-center lg:text-left">Your Shopping Cart</h1>
-        <div className="flex pt-8">
-          <p className="text-xl font-normal ml-10">Products</p>
-          <p className="text-xl font-normal ml-96">Quantity</p>
-          <p className="text-xl font-normal ml-96">Total</p>
-        </div>
-
-        <hr className="border-t border-gray-300 my-1 ml-6 mr-6 pt-2" />
-
-        <div className="flex ml-10 pt-5">
-          <img
-            src="/img/Product Image.png"
-            alt="Product 1"
-            className="w-20 h-20 sm:w-28 sm:h-28 transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1" />
-          <div className="ml-6">
-            <h1 className="text-base sm:text-lg font-medium">Graystone vase</h1>
-            <p className="text-sm mt-2">A timeless ceramic vase with a tri-color grey glaze.</p>
-            <p className="mt-2 text-base font-semibold">£85</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <p className="text-lg font-normal ml-24">1</p>
-          </div>
-          <div className="sm:hidden lg:block">
-            <p className="ml-96 text-lg font-medium">£85</p>
-          </div>
-        </div>
-
-        <div className="flex ml-10 pt-5">
-          <img
-            src="/img/Product Image 2.png"
-            alt="Product 2"
-            className="w-20 h-20 sm:w-28 sm:h-28 transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1" />
-          <div className="ml-6">
-            <h1 className="text-base sm:text-lg font-medium">Basic white vase</h1>
-            <p className="text-sm mt-2">Beautiful and simple, this is one for the classics.</p>
-            <p className="mt-2 text-base font-semibold">£125</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <p className="text-lg font-normal ml-32">1</p>
-          </div>
-          <div className="sm:hidden lg:block">
-            <p className="ml-96 text-lg font-medium">£125</p>
-          </div>
-        </div>
-
-        <hr className="border-t border-gray-300 my-1 ml-6 mr-6 mt-8" />
-
-        <div className="mt-8 text-center lg:text-right">
-          <h1 className="inline text-lg sm:text-xl font-normal mr-2">Subtotal</h1>
-          <h1 className="inline text-xl sm:text-2xl mr-2 font-medium">£210</h1>
-          <p className="mt-4">Taxes and shipping are calculated at checkout</p>
-          <button className="bg-violet-950 h-12 sm:h-14 mt-6 w-full sm:w-56 rounded-sm text-white">Go to checkout</button>
-        </div>
-      </div>
-
-
-      <div className='px-6 md:px-12 py-8 bg-[#2A254B] mt-8'>
+        <div className="container mx-auto p-4">
+            <h1 className="text-2xl text-[#2A254B] font-serif font-bold mb-4">Your shopping cart</h1>
+            <div className="grid gap-4">
+                {cart.map((product) => (
+                    <div
+                        key={product.id}
+                        className="flex items-center gap-4 p-4 border rounded-md shadow-sm"
+                    >
+                        <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-24 h-24 object-cover rounded"
+                        />
+                        <div className="flex-1">
+                            <h2 className="text-lg font-bold">{product.name}</h2>
+                            <p className="text-gray-600">{product.description}</p>
+                            <p className="text-gray-800 font-semibold">Price: ${product.price}</p>
+                        </div>
+                        <div>
+                            <input
+                                type="number"
+                                min="1"
+                                value={product.quantity}
+                                onChange={(e) => updateQuantity(product.id, +e.target.value)}
+                                className="border text-black rounded w-16 text-center"
+                            />
+                            <p className="text-gray-800 font-semibold">
+                                Total: ${product.price * product.quantity}
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <div className="mt-6 p-4 border-t text-slate-800">
+                <p className="text-right text-lg font-bold">Subtotal: ${subTotal}</p>
+                <p className="text-right text-sm text-gray-500">
+                    Taxes and shipping are calculated at checkout.
+                </p>
+                    <button className="mt-4 bg-slate-800  text-white py-2 px-4 rounded">
+                        Go to Checkout
+                    </button>
+            </div>
+            <div>
+            <div className='px-6 md:px-12 py-8 bg-[#2A254B] mt-8'>
         <div className="flex flex-wrap gap-12 md:gap-[100px] lg:gap-[200px]">
           {/* Menu Section */}
           <div className="text-gray-500 w-full sm:w-auto">
@@ -161,9 +202,13 @@ const Cart = () => {
           </div>
         </div>
       </div>
+        </div>
+      </div>
    
     </div>
-  );
+        </div>
+        
+    );
 };
 
 export default Cart;
