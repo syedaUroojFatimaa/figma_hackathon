@@ -1,50 +1,49 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Banner() {
   return (
-    <div className="bg-gray-50">
-      <div className="pt-14 flex flex-col md:flex-row">
-        <div className="bg-white h-[600px] w-full md:w-[700px] text-gray-900 font-normal pt-16 px-6 md:px-0">
-          <h1 className="text-center text-3xl">
+    <div className="bg-gray-50 pt-4">
+      <div className="flex flex-col md:flex-row items-center md:items-stretch h-screen w-full">
+        {/* Left Section */}
+        <div className="bg-white flex flex-col justify-center text-[#2A254B] font-normal px-6 md:px-14 w-full md:w-1/2">
+          {/* Title */}
+          <h1 className="text-center md:text-left text-4xl font-semibold leading-tight">
             From a studio in London to a global brand
           </h1>
-          <p className="ml-0 md:ml-14 text-gray-900 font-normal text-3xl">
+          <p className="text-center md:text-left text-2xl font-light mt-4">
             Over 400 outlets
           </p>
-          <p className="ml-0 md:ml-14 pt-12 font-normal text-gray-600">
+
+          {/* Description */}
+          <p className="mt-10 text-center md:text-left font-medium leading-relaxed">
             When we started Avion, the idea was simple. Make high-quality
-            furniture
+            furniture affordable and available for the mass market.
           </p>
-          <p className="ml-0 md:ml-14 font-normal text-gray-600">
-            affordable and available for the mass market.
-          </p>
-
-          <p className="ml-0 md:ml-14 font-normal pt-12 text-gray-600">
+          <p className="mt-4 text-center md:text-left font-medium leading-relaxed">
             Handmade, and lovingly crafted furniture and homeware is what we
-            live,
-          </p>
-          <p className="ml-0 md:ml-14 font-normal text-gray-600">
-            breathe and design so our Chelsea boutique became the hotbed for
-            the
-          </p>
-          <p className="ml-0 md:ml-14 font-normal text-gray-600">
-            London interior design community.
+            live, breathe and design so our Chelsea boutique became the hotbed
+            for the London interior design community.
           </p>
 
-          <button className="bg-slate-50 mr-10 ml-0 md:ml-14 my-8 py-3 px-6 text-gray-700 hover:bg-slate-200 w-full md:w-auto">
-            Get in Touch
-          </button>
+          {/* Button */}
+          <div className="flex justify-center md:justify-start">
+            <button className="bg-[#2A254B] text-white py-3 px-8 mt-10 hover:bg-blue-900 transition">
+              Get in Touch
+            </button>
+          </div>
         </div>
 
-        <Image
-          src="/img/banner.jpg"
-          alt="banner"
-          width={750}
-          height={700}
-          className="w-full md:w-[750px] h-auto"
-        />
+        {/* Right Section */}
+        <div className="relative w-full md:w-1/2 h-full">
+          <Image
+            src="/banner.jpg"
+            alt="banner"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
     </div>
   );

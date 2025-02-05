@@ -1,18 +1,16 @@
 import React from 'react'
-import Header from './components/Header'
-import HeroSection from './components/HeroSection'
-import Hero2 from './components/Hero2'
-import Hmecards from './components/Hmecards'
-import Join from './components/Join'
-import Footer from './components/Footer'
+import Hero from './components/Hero'
+import Brand from './components/Brand'
+import Popular from './components/Popular'
+import Join from "./components/Join"
 import Banner from './components/Banner'
+import Footer from './components/Footer'
 export default function page() {
   return (
-    <div className="">
-      <Header />
-      <HeroSection />
-      <Hero2 />
-      <Hmecards />
+    <div>
+      <Hero />
+      <Brand />
+      <Popular />
       <Join />
       <Banner />
       <Footer />

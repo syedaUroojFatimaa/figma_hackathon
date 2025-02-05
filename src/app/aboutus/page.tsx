@@ -15,32 +15,10 @@ import Image from 'next/image';
 export default function page() {
   return (
     <div>
-            <div className="bg-white">
-        <header className="bg-white">
-          <div className="container mx-auto px-4 flex items-center justify-between py-4 flex-col md:flex-row">
-            <FaSearch className="text-gray-600 hover:text-gray-900 cursor-pointer" size={20} />
-            <h1 className="text-3xl font-normal text-center">Avion</h1>
-            <div className="flex items-center space-x-4 mt-4 md:mt-0">
-              <Link href="./cart">
-                <FaShoppingCart className="text-gray-600 hover:text-gray-900 cursor-pointer" size={20} />
-              </Link>
-              <FaUser className="text-gray-600 hover:text-gray-900 cursor-pointer" size={20} />
-            </div>
-          </div>
-        </header>
 
         <hr className="border-t border-gray-300 my-1 ml-6 mr-6" />
 
-        <div className="hidden md:flex space-x-8 ml-96 pt-4">
-          <a href="#" className="text-gray-600 hover:text-gray-900">Plant pots</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">Ceramics</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">Tables</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">Chairs</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">Crockery</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">Tableware</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">Cutlery</a>
-        </div>
-      </div>
+        
       
     <div>
       {/* Section 1 */}
@@ -51,7 +29,7 @@ export default function page() {
         <p className="text-2xl sm:text-4xl font-normal text-gray-950 ml-4 sm:ml-14 pt-2 sm:pt-1">
           quality and outstanding customer service
         </p>
-        <Link href="./allprod">
+        <Link href="/furniture">
           <button className="absolute top-0 right-0 mt-16 sm:mt-20 mr-4 sm:mr-40 bg-gray-50 text-black py-3 sm:py-4 px-6 sm:px-8">
             View Products
           </button>
@@ -71,7 +49,7 @@ export default function page() {
             small studio in South London in early 2014.
           </p>
           <div className="ml-4 lg:ml-16 pt-8 lg:pt-36">
-            <Link href="./allprod">
+            <Link href="/furniture">
               <button className="bg-violet-400 text-white py-2 sm:py-3 px-4 sm:px-6">
                 View Collection
               </button>
@@ -80,7 +58,7 @@ export default function page() {
         </div>
         <div className="pt-10 sm:pt-20">
           <Image
-            src="/img/Image Block.png"
+            src="/Image Block.png"
             alt="Image Block showcasing brand identity"
             width={500}
             height={800}
@@ -92,7 +70,7 @@ export default function page() {
       <div className="pt-10 sm:pt-14 flex flex-col lg:flex-row">
         <div className="w-full lg:w-auto">
           <Image
-            src="/img/bfSofa.jpg"
+            src="/bfSofa.jpg"
             alt="Background image of a sofa"
             width={750}
             height={700}
